@@ -132,7 +132,7 @@ public class EmailServiceImpl implements EmailService {
 			token = tokenService.createVerificationToken(user);
 		}
 
-		String emailContent = "Verification link : https://e3a9941a87cc159c.ngrok.app/website/Email-Verification.php \n"
+		String emailContent = "Verification link : https://portal.aquillius.com/Email-Verification.php \n"
 				+ "Verification Code :  " + token.getToken();
 		sendEmail(user.getEmail(), "Account Verification", emailContent);
 	}
